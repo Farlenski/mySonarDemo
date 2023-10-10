@@ -10,5 +10,5 @@ jobs:
       - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: ${{secrets.MY_SECRET_NAME}}
+      - run: echo ${{secrets.MY_SECRET_NAME}}
 
