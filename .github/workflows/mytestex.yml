@@ -22,7 +22,7 @@ jobs:
         run: python db.py
       
       - name: Create project build
-        run: python app.py --host [HOST] --port [PORT]
+        run: python app.py --host localhost --port 5000
 
       - name: Run unit tests
         run: python -m unittest
