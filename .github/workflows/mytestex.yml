@@ -22,7 +22,7 @@ jobs:
         run: pip3 install -r requirements.txt
 
       - name: Create project build
-        run: python3 setup.py build
+        run: gunicorn --bind 0.0.0.0:5000 app:app --daemon
 
       - name: Run unit tests
         run: python3 -m unittest
