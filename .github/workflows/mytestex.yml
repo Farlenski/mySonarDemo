@@ -22,7 +22,7 @@ jobs:
         run: python db.py
       
       - name: Create project build
-        run: python app.py --host localhost --port 5000
+        run: gunicorn --bind 0.0.0.0:5000 app:app
 
       - name: Run unit tests
         run: python -m unittest
