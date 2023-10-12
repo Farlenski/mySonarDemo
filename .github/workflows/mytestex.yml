@@ -18,6 +18,9 @@ jobs:
       - name: Download dependencies
         run: pip3 install -r requirements.txt
 
+      - name: Create database
+        run: python db.py
+      
       - name: Create project build
         run: python app.py --host localhost --port 5000
 
